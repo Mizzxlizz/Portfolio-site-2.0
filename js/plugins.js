@@ -21,4 +21,16 @@
   }
 }());
 
-// Place any jQuery/helper plugins in here.
+//Typed
+let options = {
+  strings: ['Photographer', 'Gamer', 'Mountainbiker', 'Developer', 'Ik ben Jelle.'],
+  typeSpeed: 50,
+  smartBackspace: true,
+  backSpeed: 40,
+  showCursor: false
+};
+
+let typed = new Typed('.typed', options);
+
+//WOW
+new WOW().init();
