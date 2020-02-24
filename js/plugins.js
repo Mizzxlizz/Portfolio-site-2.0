@@ -27,10 +27,18 @@ let options = {
   typeSpeed: 50,
   smartBackspace: true,
   backSpeed: 40,
-  showCursor: false
+  showCursor: false,
+  onComplete: (self) => {
+    //Callback for typed <=> animate.css
+    $(".lead").css("opacity", "1");
+    animateCSS('.lead', 'fadeInUp');
+  }
 };
 
 let typed = new Typed('.typed', options);
+
+
+
 
 //WOW
 new WOW().init();
