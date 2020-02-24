@@ -35,6 +35,7 @@ let options = {
   }
 };
 
+//Init tpyed.js on element
 let typed = new Typed('.typed', options);
 
 

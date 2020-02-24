@@ -13,6 +13,7 @@ $(document).ready(function(){
   });
 });
 
+//Add animations to objects on the fly
 function animateCSS(element, animationName, callback) {
   const node = document.querySelector(element)
   node.classList.add('animated', animationName)
