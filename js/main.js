@@ -15,12 +15,12 @@ $(document).ready(function(){
 
 //Add animations to objects on the fly
 function animateCSS(element, animationName, callback) {
-  const node = document.querySelector(element)
-  node.classList.add('animated', animationName)
+  const node = document.querySelector(element);
+  node.classList.add('animated', animationName);
 
   function handleAnimationEnd() {
-    node.classList.remove('animated', animationName)
-    node.removeEventListener('animationend', handleAnimationEnd)
+    node.classList.remove('animated', animationName);
+    node.removeEventListener('animationend', handleAnimationEnd);
 
     if (typeof callback === 'function') callback()
   }
