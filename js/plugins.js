@@ -22,13 +22,13 @@
 }());
 
 //Typed
-let options = {
+var options = {
   strings: ['Photographer', 'Gamer', 'Mountainbiker', 'Developer', 'Ik ben Jelle.'],
   typeSpeed: 50,
   smartBackspace: true,
   backSpeed: 40,
   showCursor: false,
-  onComplete: (self) => {
+  onComplete: function(self) {
     //Callback for typed <=> animate.css
     $(".lead").css("opacity", "1");
     animateCSS('.lead', 'fadeInUp');
@@ -36,7 +36,7 @@ let options = {
 };
 
 //Init tpyed.js on element
-let typed = new Typed('.typed', options);
+var typed = new Typed('.typed', options);
 
 
 
