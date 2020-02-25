@@ -108,3 +108,7 @@ nav {
 .copyright {
   margin: 10px;
 }
+
+_:-ms-fullscreen,:root .lead {
+  margin-top: 60px !important;
+}
