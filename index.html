@@ -57,6 +57,9 @@
       <div class="icon">
         <a href="#jelle"><i class="fas fa-angle-double-down animated fadeIn slower"></i></a>
       </div>
+      <div class="info-icon">
+        <a href="#" data-toggle="modal" data-target="#pictureInfo"><i class="fas fa-info animated fadeIn slower"></i></a>
+      </div>
     </div>
   </div>
 </header>
@@ -218,6 +221,47 @@
    </div>
  </div>
 </footer>
+
+<div class="modal fade" id="pictureInfo" tabindex="-1" role="dialog" aria-labelledby="PictureInfoModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="PictureInfoModal">Foto informatie</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Kuta, Bali, Indonesia
+            <span class="badge"><i class="fas fa-map-marked-alt"></i></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            8°45'47.6"S 115°10'22.8"E
+            <span class="badge"><i class="fas fa-map-marker-alt"></i></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Nikon Coolpix P530
+            <span class="badge"><i class="fas fa-camera"></i></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            15sec. f/3,7 4,3mm
+            <span class="badge"><i class="fas fa-cog"></i></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Jelle Glebbeek, 2019
+            <span class="badge"><i class="fas fa-copyright"></i></span>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-href='img/non-minified%20images/Stars-over-the-frangipani.jpg' download="Stars-Over-The-Frangipani.jpg" onclick='forceDownload(this)'>Download foto</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
