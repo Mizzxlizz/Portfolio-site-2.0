@@ -35,9 +35,10 @@ var options = {
   }
 };
 
-//Init tpyed.js on element
-var typed = new Typed('.typed', options);
-
+//Init tpyed.js on element when ALL resources are loaded
+window.addEventListener("load", function(){
+  var typed = new Typed('.typed', options);
+});
 
 
 
