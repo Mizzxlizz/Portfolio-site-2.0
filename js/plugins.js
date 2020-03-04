@@ -40,7 +40,5 @@ window.addEventListener("load", function(){
   var typed = new Typed('.typed', options);
 });
 
-
-
 //WOW
 new WOW().init();
