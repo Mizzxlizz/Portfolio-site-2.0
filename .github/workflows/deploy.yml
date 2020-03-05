@@ -22,12 +22,20 @@ jobs:
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         git-ftp-args: --insecure
-    - name: Update deployment status
-      if: always()
+    - name: Update deployment status (success)
+      if: success()
       uses: chrnorm/deployment-status@releases/v1
       with:
         token: ${{ github.token }}
-        target-url: http://my-app-url.com
-        state: ${{ job.status }}
+        target-url: http://jelleglebbeek.com/hsleiden
+        state: success
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}  
+    - name: Update deployment status (failure)
+      if: failure()
+      uses: chrnorm/deployment-status@releases/v1
+      with:
+        token: ${{ github.token }}
+        target-url: http://jelleglebbeek.com/hsleiden
+        state: failure
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }} 
    
