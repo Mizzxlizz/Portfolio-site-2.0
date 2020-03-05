@@ -14,4 +14,4 @@ jobs:
         ftp-server: sftp://ssh.strato.de
         ftp-username: jelleglebbeek.com
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./jelleglebbeek.com/hsleiden
+        local-dir: ./jelleglebbeek/hsleiden
