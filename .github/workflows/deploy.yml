@@ -8,16 +8,26 @@ jobs:
     - uses: actions/checkout@master
       with:
         fetch-depth: 3
-    - name: deploying-to-ftp
+    - uses: chrnorm/deployment-action@releases/v1
+      name: Create GitHub deployment
+      id: deployment
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        target-url: http://jelleglebbeek.com/hsleiden
+        environment: production  
+    - name: Deploy to SFTP server
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
         ftp-server: sftp://ssh.strato.de/jelleglebbeek/hsleiden
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         git-ftp-args: --insecure
-    - name: update deploy status
+    - name: Update deployment status
       if: always()
-      uses: unacast/actions-github-deployment-status@v0.3.0
+      uses: chrnorm/deployment-status@releases/v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        status: ${{ job.status }} 
+        token: ${{ github.token }}
+        target-url: http://my-app-url.com
+        state: ${{ job.status }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}  
+   
