@@ -17,7 +17,7 @@ jobs:
         git-ftp-args: --insecure
     - name: update deploy status
       if: always()
-      uses: unacast/actions-github-deployment-status@[version]
+      uses: unacast/actions-github-deployment-status@0.3.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         status: ${{ job.status }} 
