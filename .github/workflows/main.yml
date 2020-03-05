@@ -1,5 +1,5 @@
 on: push
-name: Deploy Website
+name: Deploy to webserver
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -14,4 +14,4 @@ jobs:
         ftp-server: sftp://ssh.strato.de
         ftp-username: jelleglebbeek.com
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./jelleglebbeek/hsleiden
+        local-dir: /jelleglebbeek/hsleiden
