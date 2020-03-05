@@ -1,5 +1,5 @@
 # Portfolio-site-2.0 
-Deze website is een portfolio site gemaakt voor een huiswerkopdracht voor de matchingsdag. Ik was in de vakantie ziek en had niks te doen, dus heb ik aardig wat tijd in dit project gestoken. Uiteindelijk moet deze site met aanpassingen en toevoegingen mijn huidige portfolio site gaan vervangen.
+Deze website is een portfolio site die gemaakt is voor een huiswerkopdracht voor de matchingsdag. In de vakantie was ik ziek en ik had niks te doen, dus heb ik aardig wat tijd in dit project gestoken. Uiteindelijk moet deze site met aanpassingen en toevoegingen mijn huidige portfolio site gaan vervangen.
 
 ## Status
 ![GitHub deployments](https://img.shields.io/github/deployments/jely2002/Portfolio-site-2.0/production?label=Deployment%20status)
